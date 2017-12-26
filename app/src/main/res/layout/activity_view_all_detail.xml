@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.popie.uoleventsdiary_user.ViewAllDetailActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewEvent"
+        android:layout_width="240dp"
+        android:layout_height="156dp"
+        android:layout_above="@+id/etName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+
+        app:civ_border_color="#78909c"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etName"
+        android:layout_alignBottom="@+id/etName"
+        android:layout_alignStart="@+id/imageViewEvent"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="36dp"
+        android:text="Name"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewEvent" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etDateTime"
+        android:layout_alignStart="@+id/btnUpdate"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="event name "
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewEvent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etDateTime"
+        android:layout_alignBottom="@+id/etDateTime"
+        android:layout_alignStart="@+id/textView9"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="36dp"
+        android:text="Date Time"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <EditText
+        android:id="@+id/etDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etVenue"
+        android:layout_alignStart="@+id/etName"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="yyyy-mm-dd hh:mm:ss"
+        android:inputType="datetime"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etVenue"
+        android:layout_alignBottom="@+id/etVenue"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="36dp"
+        android:text="Venue"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <EditText
+        android:id="@+id/etVenue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etOrganizer"
+        android:layout_alignStart="@+id/etDateTime"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="venue"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDateTime" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etPhone"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="36dp"
+        android:text="Organiser"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <EditText
+        android:id="@+id/etOrganizer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etPhone"
+        android:layout_alignStart="@+id/etVenue"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="organizer "
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etVenue" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnUpdate"
+        android:layout_alignStart="@+id/textView13"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="36dp"
+        android:text="Phone"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView14"
+        android:layout_alignBottom="@+id/textView14"
+        android:layout_alignStart="@+id/etOrganizer"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="03xx-xxxxxxx"
+        android:inputType="number"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etOrganizer" />
+
+    <!--<Button-->
+        <!--android:id="@+id/btnUpdate"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:text="Update"-->
+        <!--android:textColor="@color/colorPrimary"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/etPhone" />-->
+</android.support.constraint.ConstraintLayout>
